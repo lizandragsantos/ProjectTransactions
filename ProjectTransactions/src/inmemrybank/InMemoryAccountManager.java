@@ -25,8 +25,7 @@ public class InMemoryAccountManager implements AccountManager {
 	@Override
 	public Account getAccount(Long id) {
 		
-		InMemoryDB.getInstance().getAccountMap().get(id);
-		return null;
+		return InMemoryDB.getInstance().getAccountMap().get(id);
 	}
 
 	@Override

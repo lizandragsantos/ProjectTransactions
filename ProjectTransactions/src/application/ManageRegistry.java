@@ -1,5 +1,8 @@
 package application;
 
+import bank.*;
+import inmemrybank.InMemoryAccountManager;
+import inmemrybank.InMemoryBankTransactionManager;
 import inmemrybank.InMemoryDB;
 
 public class ManageRegistry {
@@ -18,4 +21,15 @@ public class ManageRegistry {
 
 		return ManageRegistry.instance;
 	}
+	
+	public BankTransactionManager getBankTransactionManager(){
+		
+		return InMemoryBankTransactionManager.getInstance();
+	}
+	
+	public AccountManager getAccountManager(){
+		
+		return InMemoryAccountManager.getInstance();
+	}
 }
+
